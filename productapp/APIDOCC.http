@@ -1,0 +1,63 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+ 
+{
+  "username":"a",
+  "email":"a@123",
+  "password":"a123"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username": "a",
+    "password": "a123"
+}
+
+###
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+Authorization: Token 965880443f95f6106edb89022fce466011439104
+
+{
+    "product_name": "wabc",
+    "product_code": "bn",
+    "category": "Electronics",
+    "price": "30000.00",
+    "stock_quantity": 1
+}
+
+###
+GET http://127.0.0.1:8000/products/
+Authorization: Token 965880443f95f6106edb89022fce466011439104
+
+###
+GET http://127.0.0.1:8000/products/4/
+Authorization: Token 965880443f95f6106edb89022fce466011439104
+
+###
+PUT http://127.0.0.1:8000/products/3/
+Content-Type: application/json
+Authorization: Token 965880443f95f6106edb89022fce466011439104
+
+{
+    "product_name": "washing meachine",
+    "product_code": "mea",
+    "category": "Electronics",
+    "price": "50000.00",
+    "stock_quantity": 5
+}
+
+###
+DELETE http://127.0.0.1:8000/products/1/
+Authorization: Token 4d2482e2b2adedc69a1aecacd88905b93caa5cd7
+
+
+
+###
+POST http://127.0.0.1:8000/logout/
+Authorization: Token 71173395273d9343244365276744eeb27ed9ba86
+
